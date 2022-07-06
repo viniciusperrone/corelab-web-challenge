@@ -1,8 +1,24 @@
+import { ArrowLeft } from 'phosphor-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Container } from '../components/Container';
 
 export function Create() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  function handleGoBack() {
+    navigate(-1);
+  }
   return (
     <Container>
+      {location.pathname !== '/' && (
+        <span
+          className="absolute mt-10 ml-10 cursor-pointer"
+          onClick={handleGoBack}
+        >
+          <ArrowLeft className="text-zinc-900" size={32} weight="light" />
+        </span>
+      )}
       <form className="flex-1 mx-[154px] mt-[58px] mb-[46px] bg-gray-900">
         <article className="flex-1 flex flex-col gap-[50px] pt-20 pb-[10px] px-[54px]">
           <div>
