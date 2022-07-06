@@ -4,7 +4,7 @@ type ChildrenComponentProps = {
   children: ReactNode;
 };
 
-export function Background({ children }: ChildrenComponentProps) {
+export function Container({ children }: ChildrenComponentProps) {
   return (
     <div className="ml-[12.2vw] mr-[25.5vw] min-h-screen bg-white flex flex-col">
       {children}

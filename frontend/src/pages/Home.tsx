@@ -1,10 +1,11 @@
 import { MagnifyingGlass, Sliders } from 'phosphor-react';
 import { Link } from 'react-router-dom';
-import { Background } from '../components/Background';
+import { Container } from '../components/Container';
+import { EditAd } from '../components/EditAd';
 
 export function Home() {
   return (
-    <Background>
+    <Container>
       <header className="flex flex-row w-full mt-[132px] pl-[3.25rem] pr-[1.85rem]">
         <div className="flex flex-row justify-evenly items-center w-full h-[45px] rounded-[100px] bg-blue-400">
           <MagnifyingGlass className="text-black" size={20} weight="light" />
@@ -23,9 +24,15 @@ export function Home() {
           />
         </Link>
       </header>
-      <button className="w-[364px] h-[50px] mt-[32px] mx-auto bg-blue-600 rounded-[100px] text-[20px] font-sans font-medium text-neutral-900">
+
+      <Link
+        className="w-[330px] h-[50px] mt-[32px] mx-auto bg-blue-600 rounded-[100px] flex justify-center items-center text-[20px] font-sans font-medium text-neutral-900"
+        to="/vehicle/create"
+      >
         ADICIONAR
-      </button>
-    </Background>
+      </Link>
+
+      <EditAd />
+    </Container>
   );
 }

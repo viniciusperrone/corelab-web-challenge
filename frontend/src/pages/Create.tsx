@@ -1,10 +1,21 @@
 import { Container } from '../components/Container';
 
-export function Filter() {
+export function Create() {
   return (
     <Container>
       <form className="flex-1 mx-[154px] mt-[58px] mb-[46px] bg-gray-900">
-        <article className="flex-1 flex flex-col gap-[52px] py-20 px-[54px]">
+        <article className="flex-1 flex flex-col gap-[50px] pt-20 pb-[10px] px-[54px]">
+          <div>
+            <h2 className="text-[20px] font-sans font-normal text-neutral-800">
+              Nome:{' '}
+            </h2>
+            <input
+              className="w-full h-9 rounded-[100px]"
+              type="text"
+              name=""
+              id=""
+            />
+          </div>
           <div>
             <h2 className="text-[20px] font-sans font-normal text-neutral-800">
               Marca:{' '}
@@ -38,29 +49,16 @@ export function Filter() {
               id=""
             />
           </div>
-          <div className="flex flex-row gap-14">
-            <div>
-              <h2 className="text-[20px] font-sans font-normal text-neutral-800">
-                Preço mín:{' '}
-              </h2>
-              <input
-                className="w-full h-9 rounded-[100px] border-[1px] border-black"
-                type="text"
-                name=""
-                id=""
-              />
-            </div>
-            <div>
-              <h2 className="text-[20px] font-sans font-normal text-neutral-800">
-                Preço max:{' '}
-              </h2>
-              <input
-                className="w-full h-9 rounded-[100px] border-[1px] border-black"
-                type="text"
-                name=""
-                id=""
-              />
-            </div>
+          <div>
+            <h2 className="text-[20px] font-sans font-normal text-neutral-800">
+              Placa:{' '}
+            </h2>
+            <input
+              className="w-full h-9 rounded-[100px]"
+              type="text"
+              name=""
+              id=""
+            />
           </div>
         </article>
         <footer className="flex justify-end px-[55px] py-10">
