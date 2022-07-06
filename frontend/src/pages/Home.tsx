@@ -1,5 +1,6 @@
 import { MagnifyingGlass, Sliders } from 'phosphor-react';
 import { Link } from 'react-router-dom';
+import { CardAd } from '../components/CardAd';
 import { Container } from '../components/Container';
 import { EditAd } from '../components/EditAd';
 
@@ -32,7 +33,7 @@ export function Home() {
         ADICIONAR
       </Link>
 
-      <EditAd />
+      <CardAd />
     </Container>
   );
 }
